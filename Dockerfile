@@ -4,7 +4,7 @@ FROM node:18.16.0
 WORKDIR  /node
 COPY . ./node
 RUN apt-get update
-
+RUN npm int
 RUN npm install
 
 # Bundle app source
