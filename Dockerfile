@@ -5,6 +5,7 @@ FROM node:latest
 COPY . ./
 
 RUN apt-get update
+RUN apt install net-tools
 
 RUN npm install
 
