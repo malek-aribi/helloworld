@@ -1,8 +1,8 @@
 FROM node:latest
 
 # Install app dependencies
-WORKDIR  /node
-COPY . ./node
+
+COPY . ./
 RUN apt-get update
 
 RUN npm install
