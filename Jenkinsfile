@@ -11,9 +11,9 @@ stage('Checkout SCM') {
 
          }
 }
-stage "Build"
 
-stage('Docker Build and Tag') {
+
+stage(' Build ') {
            steps {
               script {
                 sh 'docker build -t malekaribi/helloworld:latest .' 
@@ -22,8 +22,8 @@ stage('Docker Build and Tag') {
           }
         }
 }
-stage "deploy "
-  stage('Publish image to Docker Hub') {
+
+  stage('deploy') {
           
           steps {
               script {
