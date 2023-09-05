@@ -11,7 +11,7 @@ stage('Checkout SCM') {
 
          }
 }
-
+stage "Build"
 
 stage('Docker Build and Tag') {
            steps {
@@ -22,6 +22,7 @@ stage('Docker Build and Tag') {
           }
         }
 }
+stage "deploy "
   stage('Publish image to Docker Hub') {
           
           steps {
