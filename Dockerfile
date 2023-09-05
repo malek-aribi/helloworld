@@ -3,7 +3,7 @@ FROM node:latest
 # Install app dependencies
 
 COPY . ./
-#RUN apt-get update
+
 RUN apt-get update
 
 RUN npm install
