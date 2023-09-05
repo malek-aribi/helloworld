@@ -1,10 +1,10 @@
-FROM node:18.16.0
+FROM node:latest
 
 # Install app dependencies
 WORKDIR  /node
 COPY . ./node
 RUN apt-get update
-RUN npm int
+
 RUN npm install
 
 # Bundle app source
