@@ -14,6 +14,7 @@ stage('Checkout SCM') {
 stage(' Test') {
            steps {
               script {
+                sh 'npm install selenium-webdriver'
                 sh 'node test.js' 
                
                
