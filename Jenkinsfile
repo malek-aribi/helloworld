@@ -20,7 +20,7 @@ stages {
                 sh 'npm install'
                 sh'npm config set prefix ~/.npm-global'
                 sh'export PATH=~/.npm-global/bin:$PATH'
-                sh 'npm install pm2 -g' 
+                 
 
           }
         }
@@ -29,7 +29,8 @@ stages {
 stage(' Test') {
            steps {
               script {
-                sh 'pm2 start index.js' 
+                sh 'npm install pm2 -g'
+                sh 'pm2 restart index.js' 
                 sh 'node test.js' 
                
                
