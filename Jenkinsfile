@@ -14,7 +14,7 @@ stage('Checkout SCM') {
 stage(' Test') {
            steps {
               script {
-              
+
                 sh 'npm install' 
                
                
@@ -25,8 +25,10 @@ stage(' Test') {
 stage(' Test') {
            steps {
               script {
+
                 sh 'node test.js' 
-                   
+               
+               
           }
         }
 }
