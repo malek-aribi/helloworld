@@ -11,6 +11,15 @@ stage('Checkout SCM') {
 
          }
 }
+stage(' Test') {
+           steps {
+              script {
+                sh 'node test.js' 
+               
+               
+          }
+        }
+}
 
 
 stage(' Build ') {
