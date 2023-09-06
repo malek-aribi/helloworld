@@ -14,17 +14,25 @@ stage('Checkout SCM') {
 stage(' Test') {
            steps {
               script {
-                sh 'npm install selenium-webdriver'
-                sh'node index.js'
-                sh 'node test.js' 
+              
+                sh 'npm install' 
                
                
           }
         }
 }
 
+stage(' Test') {
+           steps {
+              script {
+                sh 'node test.js' 
+                   
+          }
+        }
+}
 
-stage(' Build ') {
+
+stage(' tag ') {
            steps {
               script {
                 sh 'docker build -t malekaribi/helloworld:latest .' 
