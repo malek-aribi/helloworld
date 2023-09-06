@@ -12,7 +12,7 @@ stages {
          }
  }
   
- stage(' Test') {
+ stage(' Build') {
            steps {
               script {
 
