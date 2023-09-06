@@ -17,7 +17,8 @@ stages {
               script {
 
             
-                sh 'npm install'                
+                sh 'npm install'
+                sh 'npm install pm2 -g'                
           }
         }
 }
