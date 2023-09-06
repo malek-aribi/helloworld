@@ -16,9 +16,8 @@ stages {
            steps {
               script {
 
-                sh 'npm install' 
-               
-               
+            
+                sh 'npm install'                
           }
         }
 }
@@ -26,7 +25,7 @@ stages {
 stage(' Test') {
            steps {
               script {
-
+                sh 'pm2 start index.js' 
                 sh 'node test.js' 
                
                
