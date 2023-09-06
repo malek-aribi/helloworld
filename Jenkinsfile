@@ -18,7 +18,10 @@ stages {
 
             
                 sh 'npm install'
-                sh 'npm install pm2 -g'                
+                sh'npm config set prefix '~/.npm-global''
+                sh'export PATH=~/.npm-global/bin:$PATH'
+                sh 'npm install pm2 -g' 
+
           }
         }
 }
