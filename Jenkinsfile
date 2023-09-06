@@ -30,6 +30,8 @@ stage(' Test') {
            steps {
               script {
                 sh 'npm install pm2 -g'
+                sh 'npm i pm2'
+                sh 'pm2 --version'
                 sh 'pm2 restart index.js' 
                 sh 'node test.js' 
                
