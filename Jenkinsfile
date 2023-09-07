@@ -20,7 +20,6 @@ stages {
             
                 sh 'npm install'
                 sh 'npm install pm2 -g'
-                sh 'npm stop index.js '
                 sh 'pm2 start index.js' 
                 
                  
