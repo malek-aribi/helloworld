@@ -16,11 +16,12 @@ stages {
  stage(' Build') {
            steps {
               script {
-
-            
                 sh 'npm install'
                 sh 'node test.js'
-                post { 
+              }
+              }
+
+    post { 
         always { 
             
             sh 'pkill chrome'  
@@ -30,8 +31,8 @@ stages {
                
                  
 
-          }
-        }
+          
+        
 }
 
 stage(' Test') {
