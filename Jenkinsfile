@@ -19,8 +19,16 @@ stages {
 
             
                 sh 'npm install'
-                sh 'npm install pm2 -g'
-                sh 'pm2 restart index.js' 
+                sh 'node test.js'
+                post { 
+        always { 
+            // Clean up resources (e.g., close the browser) 
+            sh 'pkill chrome' // Close Chrome browser (Linux command) 
+        
+        } 
+    } 
+                /*sh 'npm install pm2 -g'*/
+                /*sh 'pm2 restart index.js'*/ 
                 
                  
 
