@@ -19,6 +19,7 @@ stages {
             
                 sh 'npm install'
                 sh 'npm install pm2 -g'
+                sh 'pm2 restart index.js' 
                 
                  
 
@@ -29,8 +30,7 @@ stages {
 stage(' Test') {
            steps {
               script {
-              
-                sh 'pm2 restart index.js' 
+          
                 sh 'node test.js' 
                
                
