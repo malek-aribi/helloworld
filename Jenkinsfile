@@ -32,7 +32,7 @@ stage(' Test') {
            steps {
               script {
           
-                //sh 'node test.js'
+                /*sh 'node test.js'*/
                
                
           }
