@@ -35,17 +35,6 @@ stages {
         
 }
 
-stage(' Test') {
-           steps {
-              script {
-          
-                
-               
-               
-          }
-        }
-}
-
 
 stage(' tag Docker image') {
            steps {
