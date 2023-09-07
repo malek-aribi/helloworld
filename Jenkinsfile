@@ -18,22 +18,20 @@ stages {
               script {
                 sh 'npm install'
                 sh 'npm install selenium-webdriver'
-                sh 'node test.js'
+                
               }
               }
-
-    post { 
-        always { 
-            
-            sh 'pkill chrome'  
-        
-        } 
-    } 
-               
-                 
-
+       
+}
+stage(' Test') {
+           steps {
+              script {
           
-        
+                sh 'node test.js'
+               
+               
+          }
+        }
 }
 
 
