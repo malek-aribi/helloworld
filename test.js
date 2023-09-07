@@ -13,35 +13,6 @@ const driver = new Builder()
   .setChromeOptions(chromeOptions)
   .build();
 
-// Your test logic here...
-
-driver.quit();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // Navigate to your Node.js application
 driver.get('http://localhost:3000'); // Replace with the actual URL of your application
 
