@@ -32,7 +32,7 @@ stage(' Test') {
            steps {
               script {
           
-                //sh 'node test.js' 
+                //sh 'node test.js'
                
                
           }
@@ -40,7 +40,7 @@ stage(' Test') {
 }
 
 
-stage(' tag ') {
+stage(' tag Docker image') {
            steps {
               script {
                 sh 'docker build -t malekaribi/helloworld:latest .' 
@@ -50,7 +50,7 @@ stage(' tag ') {
         }
 }
 
-  stage('deploy') {
+  stage('deploy in Docker Hub') {
           
           steps {
               script {
