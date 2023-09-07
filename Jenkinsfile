@@ -1,14 +1,15 @@
 pipeline {
 agent any
-           tools {nodejs "nodejs"}
+           tools { nodejs "nodejs" }
 stages {
 
  stage('clone') {          
          steps {
+
              checkout scm
              
-
-
+         
+         
          }
  }
   
