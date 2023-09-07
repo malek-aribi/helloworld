@@ -1,7 +1,46 @@
-const { Builder, By, Key, until } = require('selenium-webdriver');
+/*const { Builder, By, Key, until } = require('selenium-webdriver');
 
 // Create a WebDriver instance (in this case, for Chrome)
-const driver = new Builder().forBrowser('chrome').build();
+const driver = new Builder().forBrowser('chrome').build();*/
+const { Builder, By, Key, until } = require('selenium-webdriver');
+const chrome = require('selenium-webdriver/chrome');
+
+const chromeOptions = new chrome.Options();
+chromeOptions.addArguments('--headless'); // Run in headless mode
+
+const driver = new Builder()
+  .forBrowser('chrome')
+  .setChromeOptions(chromeOptions)
+  .build();
+
+// Your test logic here...
+
+driver.quit();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // Navigate to your Node.js application
 driver.get('http://localhost:3000'); // Replace with the actual URL of your application

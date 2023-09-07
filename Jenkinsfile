@@ -17,6 +17,7 @@ stages {
            steps {
               script {
                 sh 'npm install'
+                sh 'npm install selenium-webdriver'
                 sh 'node test.js'
               }
               }
